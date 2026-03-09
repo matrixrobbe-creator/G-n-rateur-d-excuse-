@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Générateur d'excuses créatives - ROBBE Maxime SLAM1</title>
+</head>
+
+<body>
+
+    <h1>Générateur d'excuses</h1>
+
+    <p>Veuillez choisir votre thématique pour recevoir une excuse.</p>
+
+    <form action="../php/gen_excuse.php" method="POST" id="gen_excuse" class="formulaire_gen">
+
+        <div class="theme_excuse">
+            <label for="thematique">Thématique</label> 
+            
+            <select name="thematique" id="thematique" required>
+                <option value="" disabled selected>Quelle sera votre thématique ?</option>
+                
+                <option value="1">Retard</option>
+                <option value="2">Devoir non fait</option>
+                <option value="3">Panne de réveil</option>
+                <option value="4">Flemme</option>
+                <option value="5">Oubli</option>
+                <option value="6">Excuse E39</option>
+            </select>
+        </div>
+
+        <div class="submit_box">
+            <button type="submit">Recevoir une excuse</button>
+        </div>
+
+    </form>
+<!--Ici on vient rajouter un formulaire pour faire l'ajout des excuses selon le thème que l'on sélectionne-->
+    <form action ="../php/gen_excuse.php" method="POST" id="ajouter_excuse" class="ajout_excuse">
+        <div class="theme_excuse">
+            <label for="thematique">Thématique</label> 
+            
+            <select name="thematique" id="thematique" required>
+                <option value="" disabled selected>Dans quelle thématique souhaitez vous rajouter une excuse ?</option>
+                
+                <option value="1">Retard</option>
+                <option value="2">Devoir non fait</option>
+                <option value="3">Panne de réveil</option>
+                <option value="4">Flemme</option>
+                <option value="5">Oubli</option>
+                <option value="6">Excuse E39</option>
+            </select> 
+
+            <label for="excuse_rajout"> Veuillez saisir votre excuse</label>
+            <input type="text-area" name="text-area" id="text-area"  placeholder="Drôle ou original si possible" required>
+            
+
+        </div>
+
+    </form>
+
+</body>
+</html>
